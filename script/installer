@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+cp script/junkisan /usr/local/bin/logh_start

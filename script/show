@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+cat /usr/local/etc/logh/debug.log
