@@ -1,8 +1,5 @@
 #!/usr/bin/env ruby 
 
-# 11/07/2019 16:04:43,起動
-# 2019/11/07 16:07:31,終了
-
 require "date"
 
 option = ARGV[0]
@@ -35,6 +32,7 @@ maps = {
     "--start"    => "起動",
     "--shutdown" => "終了"
 }
+ 
 date_string = DateTime.now.strftime("%Y/%d/%m %H:%M:%S #{maps[option]}")
 
 File.open(dest, "a+") do |f| 
