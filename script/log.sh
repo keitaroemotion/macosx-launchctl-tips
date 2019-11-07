@@ -40,18 +40,18 @@ if option == "--shutdown"
     dest = dest_cache
 end
 
-alpha = ""
-
-if option == "--start"
-    if File.exist?(dest_cache)
-        alpha = `cat #{dest_cache}`
-        system "rm -rf #{dest_cache}"
-        puts "#{dest_cache} removed."
-    end
-end
+# alpha = ""
+#
+# if option == "--start"
+#     if File.exist?(dest_cache)
+#         alpha = `cat #{dest_cache}`
+#         system "rm -rf #{dest_cache}"
+#         puts "#{dest_cache} removed."
+#     end
+# end
 
 File.open(dest, "a+") do |f| 
-    f.puts "#{alpha}#{date_string}"
+    f.puts "#{date_string}"
 end
 
 puts "SUCCESS"
