@@ -2,10 +2,11 @@
 
 require "date"
 
-option = ARGV[0]
-keys   = ["--start", "--shutdown"]
-home   = File.expand_path('~')
-dest   = "#{home}/.log/log.csv"
+option      = ARGV[0]
+keys        = ["--start", "--shutdown"]
+home        = File.expand_path('~')
+dest        = "#{home}/.log/log.csv"
+dest_cache  = "#{home}/.log/.log.csv"
 
 def show_help_menu()
     appname = "logh"
@@ -35,8 +36,22 @@ maps = {
  
 date_string = DateTime.now.strftime("%Y/%d/%m %H:%M:%S #{maps[option]}")
 
-File.open(dest, "a+") do |f| 
-    f.puts date_string
+if option == "--shutdown"
+    dest = dest_cache
 end
 
+alpha = ""
 
+if option == "--start"
+    if File.exist?(dest_cache)
+        alpha = `cat #{dest_cache}`
+        system "rm -rf #{dest_cache}"
+        puts "#{dest_cache} removed."
+    end
+end
+
+File.open(dest, "a+") do |f| 
+    f.puts "#{alpha}#{date_string}"
+end
+
+puts "SUCCESS"

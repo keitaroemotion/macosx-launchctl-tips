@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-rm /usr/local/etc/logh/startup.log
-rm /usr/local/etc/logh/shutdown.log
+sudo rm ~/.log/*.csv
+

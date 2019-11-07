@@ -1,0 +1,1 @@
+cat /var/log/system.log | grep shutdown --color=auto
