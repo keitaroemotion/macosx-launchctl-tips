@@ -1,7 +1,3 @@
 #!/usr/bin/env bash
 
-echo "\n------------ STARTUP ------------\n\n"
-cat /usr/local/etc/logh/startup.log
-
-echo "\n------------ SHUTDOWN -----------\n\n"
-cat /usr/local/etc/logh/shutdown.log
+cat ~/.log/log.csv
