@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-cat /usr/local/etc/logh/debug.log
+echo "\n------------ STARTUP ------------\n\n"
+cat /usr/local/etc/logh/startup.log
+
+echo "\n------------ SHUTDOWN -----------\n\n"
+cat /usr/local/etc/logh/shutdown.log
