@@ -10,7 +10,7 @@
     <key>Label</key>
     <string>com.startup</string>
     <key>Program</key>
-        <string>/usr/local/bin/logh.sh</string>
+        <string>/Users/moomin/.log/loghive --start</string>
     <key>RunAtLoad</key>
     <true/>
     <key>KeepAlive</key>

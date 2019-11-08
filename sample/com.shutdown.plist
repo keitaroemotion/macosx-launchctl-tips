@@ -13,7 +13,7 @@
 
         <key>ProgramArguments</key>
         <array>
-            <string>/usr/local/bin/loghive</string>
+            <string>/Users/moomin/.log/loghive --shutdown</string>
         </array>
 
         <key>RunAtLoad</key>

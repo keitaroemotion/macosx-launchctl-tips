@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 
+mkdir -p .log
 cp script/log.sh /usr/local/bin/loghive
+cp script/log.sh $HOME/.log/loghive
+sudo cp -v sample/* /Library/LaunchDaemons/
+sudo chown -R moomin:wheel /Library/LaunchDaemons/com.startup.plist
+sudo chown -R moomin:wheel /Library/LaunchDaemons/com.shutdown.plist
