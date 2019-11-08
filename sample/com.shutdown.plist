@@ -13,7 +13,7 @@
 
         <key>ProgramArguments</key>
         <array>
-            <string>loghive-shut</string>
+            <string>/usr/local/bin/loghive-shut</string>
         </array>
 
         <key>RunAtLoad</key>
