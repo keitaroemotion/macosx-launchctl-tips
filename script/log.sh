@@ -46,10 +46,8 @@ date_string = DateTime.now.strftime("%Y/%d/%m %H:%M:%S #{maps[option]}")
 #     end
 # end
 
-if option == "--shutdown"
-    File.open(dest, "a+") do |f| 
-        f.puts "#{date_string}"
-    end
+File.open(dest, "a+") do |f| 
+    f.puts "#{date_string}"
 end
 
 puts "-------------------- DONE --------------------"
