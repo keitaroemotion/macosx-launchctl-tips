@@ -1,3 +1,17 @@
-#!/usr/bin/env bash
+#!/bin/bash
+function shutdown()
+{
+    loghive --shutdown
+    exit 0
+}
 
-loghive --shutdown
+function startup()
+{
+    tail -f /dev/null &
+    wait $!
+}
+
+trap shutdown SIGTERM
+trap shutdown SIGKILL
+
+startup;
