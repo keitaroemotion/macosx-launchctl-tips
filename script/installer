@@ -2,8 +2,8 @@
 
 set -e
 
-sed -i '' 's/moomin/$whoami/g' sample/com.shutdown.plist
-sed -i '' 's/moomin/$whoami/g' sample/com.startup.plist
+sed -i '' "s/moomin/$(whoami)/g" sample/com.shutdown.plist
+sed -i '' "s/moomin/$(whoami)/g" sample/com.startup.plist
 
 mkdir -p .log
 cp script/log.sh /usr/local/bin/loghive
