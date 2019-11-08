@@ -36,16 +36,6 @@ maps = {
  
 date_string = DateTime.now.strftime("%Y/%d/%m %H:%M:%S #{maps[option]}")
 
-# alpha = ""
-#
-# if option == "--start"
-#     if File.exist?(dest_cache)
-#         alpha = `cat #{dest_cache}`
-#         system "rm -rf #{dest_cache}"
-#         puts "#{dest_cache} removed."
-#     end
-# end
-
 File.open(dest, "a+") do |f| 
     f.puts "#{date_string}"
 end
