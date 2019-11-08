@@ -1,5 +1,5 @@
 TODO execute junkisan script
 
 ```
-$ ./script/regis
+$./script/installer
 ```
